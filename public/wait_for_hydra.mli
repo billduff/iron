@@ -6,9 +6,9 @@ open! Import
 
 module Action : sig
   type t =
-    { feature_path      : Iron.Feature_path.t
-    ; rev_zero          : Iron.Rev.t option
-    ; timeout           : Iron.Time.Span.t
+    { feature_path      : Export.Iron.Feature_path.t
+    ; rev_zero          : Export.Iron.Rev.t option
+    ; timeout           : Export.Iron.Time.Span.t
     ; whether_to_update : [ `No_update
                           | `Update
                           ]
@@ -18,8 +18,8 @@ end
 
 module Reaction : sig
   type t =
-    { tip              : Iron.Rev.t
-    ; remote_repo_path : Iron.Remote_repo_path.t
+    { tip              : Export.Iron.Rev.t
+    ; remote_repo_path : Export.Iron.Remote_repo_path.t
     }
   [@@deriving sexp_of]
 end

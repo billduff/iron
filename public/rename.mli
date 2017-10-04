@@ -3,8 +3,8 @@ open! Import
 
 module Action : sig
   type t =
-    { from           : Iron.Feature_path.t
-    ; to_            : Iron.Feature_path.t
+    { from           : Export.Iron.Feature_path.t
+    ; to_            : Export.Iron.Feature_path.t
     ; skip_gca_check : bool
     }
   [@@deriving fields, sexp_of]

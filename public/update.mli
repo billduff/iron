@@ -4,7 +4,7 @@ open! Import
 module Action : sig
   type t =
     | Satellites_only
-    | Feature of Iron.Feature_path.t
+    | Feature of Export.Iron.Feature_path.t
   [@@deriving sexp_of]
 end
 

@@ -4,7 +4,7 @@ open! Import
 module Action : Unit
 
 module Reaction : sig
-  type t = Iron.Rpc_description.t list
+  type t = Export.Iron.Rpc_description.t list
 end
 
 include Iron_command_rpc.S

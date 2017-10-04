@@ -3,8 +3,8 @@ open! Import
 
 module Which_obligations : sig
   type t =
-    { repo_root          : Iron.Abspath.t
-    ; file_tree_of       : [ `Working_copy | `Rev of Iron.Raw_rev.t ]
+    { repo_root          : Export.Iron.Abspath.t
+    ; file_tree_of       : [ `Working_copy | `Rev of Export.Iron.Raw_rev.t ]
     ; aliases_resolution : [ `None
                            | `Using_latest_aliases_from_iron_server
                            ]
@@ -18,7 +18,7 @@ module List_users : sig
     [@@deriving sexp_of]
   end
   module Reaction : sig
-    type t = Iron.Unresolved_name.Set.t
+    type t = Export.Iron.Unresolved_name.Set.t
     [@@deriving sexp_of]
   end
 
@@ -33,7 +33,7 @@ module List_groups : sig
     [@@deriving sexp_of]
   end
   module Reaction : sig
-    type t = Iron.Unresolved_name.Set.t Iron.Group_name.Map.t
+    type t = Export.Iron.Unresolved_name.Set.t Export.Iron.Group_name.Map.t
     [@@deriving sexp_of]
   end
 

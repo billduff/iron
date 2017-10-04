@@ -1,6 +1,6 @@
 open! Core
 open! Import
-open Iron
+open Export.Iron
 
 type t
 

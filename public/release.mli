@@ -3,9 +3,9 @@ open! Import
 
 module Action : sig
   type t =
-    { feature_path            : Iron.Feature_path.t
-    ; for_                    : Iron.User_name.t
-    ; included_features_order : Iron.Feature.Sorted_by.t
+    { feature_path            : Export.Iron.Feature_path.t
+    ; for_                    : Export.Iron.User_name.t
+    ; included_features_order : Export.Iron.Feature.Sorted_by.t
     }
   [@@deriving sexp_of]
 end

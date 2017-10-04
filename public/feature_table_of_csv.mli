@@ -12,7 +12,7 @@ end
 module Action : sig
   type t =
     { headers                 : string Row.t
-    ; data                    : Iron.Feature_path.t Row.t list
+    ; data                    : Export.Iron.Feature_path.t Row.t list
     ; preserve_input_ordering : bool
     ; display_ascii           : bool
     ; max_output_columns      : int

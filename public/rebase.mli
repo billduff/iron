@@ -11,10 +11,10 @@ end
 
 module Action : sig
   type t =
-    { feature_path                : Iron.Feature_path.t
+    { feature_path                : Export.Iron.Feature_path.t
     ; allow_non_cr_clean_new_base : bool
-    ; for_                        : Iron.User_name.t
-    ; new_base                    : Iron.Raw_rev.t option
+    ; for_                        : Export.Iron.User_name.t
+    ; new_base                    : Export.Iron.Raw_rev.t option
     ; abort_on_merge_conflicts    : bool
     ; post_merge_validation_hook  : Validation_command.t option
     }

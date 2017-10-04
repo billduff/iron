@@ -3,8 +3,8 @@ open! Import
 
 module Action : sig
   type t =
-    { feature_path            : Iron.Feature_path.t
-    ; feature_id              : Iron.Feature_id.t option
+    { feature_path            : Export.Iron.Feature_path.t
+    ; feature_id              : Export.Iron.Feature_id.t option
     }
   [@@deriving sexp_of]
 end

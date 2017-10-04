@@ -3,9 +3,9 @@ open! Import
 
 module Action : sig
   type t =
-    { feature_path      : Iron.Feature_path.t
-    ; for_              : Iron.User_name.t
-    ; lock_names        : Iron.Lock_name.t list
+    { feature_path      : Export.Iron.Feature_path.t
+    ; for_              : Export.Iron.User_name.t
+    ; lock_names        : Export.Iron.Lock_name.t list
     ; even_if_permanent : bool
     }
   [@@deriving fields, sexp_of]
